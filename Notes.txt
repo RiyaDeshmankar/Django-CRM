@@ -1,0 +1,4 @@
+python manage.py migrate-  part of djangos databse, used to apply migrations/changes made
+whenever you create update change any model always run these commands
+if u want to go on sqlite go on search type: >sqlite:open databse
+Model Manager-gateway to interact with databse,interfce thru which django performs queries 
