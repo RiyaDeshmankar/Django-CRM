@@ -14,7 +14,12 @@ class Lead(models.Model):
 #links each lead to an agent,if agent is deleted all leads will be deleted too
     agent= models.ForeignKey("Agent", on_delete=models.CASCADE)
     
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
+    
 #agent who manages leads  
 class Agent(models.Model):
     user= models.OneToOneField(User, on_delete=models.CASCADE)
    
+    def __str__(self):
+        return self.user.email
