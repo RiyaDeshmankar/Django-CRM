@@ -1,13 +1,25 @@
 from django.shortcuts import render, redirect
 from . import models
 from . import forms
+from django.views.generic import TemplateView
+#class based view
+
+class LandingPagebView(TemplateView):
+    template_name="landing.html"
+
+
 #fxn based views
+def landing_page(req):
+    return render(req,'landing.html')
+
+
 def lead_list(req): #Display a list of all leads
     leads= models.Lead.objects.all()
     context={
         'leads':leads
     }
     return render(req, 'leads/lead_list.html', context)  
+
 
 def lead_detail(req, pk ): #retrieves lead details using primary key
     lead= models.Lead.objects.get(id=pk)
@@ -43,6 +55,7 @@ def lead_update(req,pk):
         'lead': lead #we can use the word forms anywhere inside the file
     }
     return render(req,'leads/lead_update.html',context)
+
 
 def lead_delete(req,pk):
     lead= models.Lead.objects.get(id=pk)
