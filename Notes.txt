@@ -2,3 +2,19 @@ python manage.py migrate-  part of djangos databse, used to apply migrations/cha
 whenever you create update change any model always run these commands
 if u want to go on sqlite go on search type: >sqlite:open databse
 Model Manager-gateway to interact with databse,interfce thru which django performs queries 
+
+CRUD- we use class based view when implementing CRUD
+create view
+retrieve view
+update view
+delete view
+
+Function-Based Views (FBVs):
+- Simple and explicit.
+- Great for small, straightforward logic.
+- Easy to read and debug.
+Class-Based Views (CBVs):
+- More modular and "reusable"
+- Ideal for complex logic or when you want to extend built-in behavior.
+- Encourages object-oriented design.
+CBV is a class but we write it with- .as_view(), which treat it as a fxn in urls.py
