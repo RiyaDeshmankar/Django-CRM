@@ -18,3 +18,9 @@ Class-Based Views (CBVs):
 - Ideal for complex logic or when you want to extend built-in behavior.
 - Encourages object-oriented design.
 CBV is a class but we write it with- .as_view(), which treat it as a fxn in urls.py
+
+Whenever error comes of success url: always update the view
+ add this->
+   """ def get_success_url(self): 
+        return reverse("agents:agent-list") """
+this will redirect to wherever you wnat to after updating

@@ -2,9 +2,9 @@
 {% load static %}
 
 {% block content %}
-    <a  href="{% url 'leads:lead-list' %}">Go back to leads</a>
+    <a  href="{% url 'agents:agent-list' %}">Go back to Agent</a>
     <hr/>
-    <h1>Are you sure you want to delete this lead?</h1>
+    <h1>Are you sure you want to delete this Agent?</h1>
     <form method="post">
         {% csrf_token %}
         {{form.as_p}}

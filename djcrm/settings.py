@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'leads',
+    'agents',
 ]
 
 MIDDLEWARE = [
@@ -126,4 +127,9 @@ STATIC_ROOT="static_root"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 AUTH_USER_MODEL='leads.User'
+EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+LOGIN_REDIRECT_URL="/leads/all"
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_URL = "/login/"

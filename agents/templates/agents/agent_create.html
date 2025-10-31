@@ -2,9 +2,8 @@
 {% load static %}
 
 {% block content %}
-    <h1>Create a form!</h1>
-    <a href="{% url 'leads:lead-list' %}">Go back to leads</a>
-    <h3>Create a new lead</h3>
+    <a href="{% url 'agents:agent-list' %}">Go back to agent</a>
+    <h3>Create a new agent</h3>
     <form method="post">
         {% csrf_token %} <!--very  imp to add in forms for security--> 
         {{form.as_p}} <!--quick way to display forms in html -->
