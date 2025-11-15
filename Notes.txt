@@ -24,3 +24,10 @@ Whenever error comes of success url: always update the view
    """ def get_success_url(self): 
         return reverse("agents:agent-list") """
 this will redirect to wherever you wnat to after updating
+
+"""How to add in github:
+  go into that particular folder where project is and then do
+  also create a repo in github
+    1. git add .
+    2. git commit -m " xyz chznges have been made or updated"
+    3. git push
